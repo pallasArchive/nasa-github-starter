@@ -18,7 +18,6 @@ Just drop your data in, push it to GitHub, and **watch the magic happen** ✨.
 ## 🛠 How to Trigger the Workflow
 
 You can make the **Python CI** workflow run in three ways:
-
 ### 1️⃣ Push to Any Branch
 ```bash
 git add .
