@@ -1,4 +1,4 @@
-# 🌌 Pallas Archive – Automated CSV to Chart
+# 🌌 Meteorite Landing Data Visualizer – Automated CSV to Chart
 
 > _Turning your raw CSV data into **beautiful charts** without lifting a finger... well, except to click “Push”._
 
