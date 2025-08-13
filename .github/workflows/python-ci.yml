@@ -2,9 +2,13 @@ name: Python CI
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - '**'   # run on pushes to any branch
   pull_request:
-    branches: [ main ]
+    branches:
+      - '**'   # run on PRs to any branch
+  workflow_dispatch:   # allow manual trigger from Actions tab
+
 
 jobs:
   build:
