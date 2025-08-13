@@ -57,16 +57,15 @@ python src/load_meteorites.py --input /path/to/Meteorite_Landings.csv
 
 ---
 
-## GitHub: First Venture Checklist (do these after downloading this starter)
-1. **Create a new repo on GitHub** (name suggestion: `nasa-github-starter`).
-2. **Upload the contents** of this folder (or clone + push from your computer).
-3. Add a clear **README** (this file) and **License** (MIT included).
-4. Create your first **issue**: “Load full NASA dataset + make plot.”
-5. Create a **branch**: `feat/full-dataset`.
-6. Commit changes (`git add -A && git commit -m "Add full NASA dataset workflow"`), then **open a Pull Request** from your branch.
-7. Merge the PR and **close the issue**.
-8. Add a **screenshot** of your chart to `/images` and reference it in README using Markdown (see below).
-9. Create a **Release** (tag `v0.1.0`).
+## GitHub: First Venture Checklist (do these after downloading starter)
+1. **Create a new repo on GitHub** 
+2. Add a clear **README** (this file) and **License** (MIT included).
+3. Create your first **issue**: “Load full NASA dataset + make plot.”
+4. Create a **branch**: `feat/full-dataset`.
+5. Commit changes (`git add -A && git commit -m "Add full NASA dataset workflow"`), then **open a Pull Request** from your branch.
+6. Merge the PR and **close the issue**.
+7. Add a **screenshot** of your chart to `/images` and reference it in README using Markdown (see below).
+8. Create a **Release** (tag `v0.1.0`).
 
 ### Add a chart preview to README
 ```markdown
@@ -80,6 +79,16 @@ python src/load_meteorites.py --input /path/to/Meteorite_Landings.csv
 - Add filters for **class**, **mass**, and **decade** in the Streamlit app.
 - Compute **top-10 meteorites by mass** and map them by coordinates.
 - Publish a short writeup in the README explaining your insights.
+
+# Make any change (edit a file or create a new one)
+echo "# Test Trigger" >> trigger.md
+
+# Stage and commit
+git add .
+git commit -m "Trigger workflow"
+
+# Push to main
+git push origin main
 
 ---
 
