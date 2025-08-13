@@ -1,86 +1,30 @@
-# NASA GitHub Starter: Meteorite Landings Mini-Project
+# Pallas Archive – Automated CSV to Chart
 
-A beginner-friendly starter repo to practice **Python + GitHub** while working with a NASA dataset (Meteorite Landings). It includes a small sample dataset, a processing script, and a minimal Streamlit app.
+This repository contains a Python script that processes CSV files and automatically generates charts/images using **GitHub Actions**.
 
----
-
-## What’s inside
-- `src/load_meteorites.py` — cleans the dataset and creates a quick summary + chart
-- `streamlit_app.py` — tiny dashboard to explore the data locally
-- `data/meteorites_sample.csv` — tiny sample so everything works out of the box
-- `images/` — charts created by the script land here
-- `outputs/` — CSV summaries land here
-- `.github/workflows/python.yml` — runs the script in CI on every push
-- `.gitignore`, `requirements.txt`, `LICENSE`
+When you push a CSV file to this repository, the workflow will run and produce output files that you can download directly from the Actions tab.
 
 ---
 
-## Quickstart (local)
-1. **Create a virtual environment (optional but recommended)**
-   ```bash
-   python -m venv .venv
-   # Windows:
-   .venv\Scripts\activate
-   # macOS/Linux:
-   source .venv/bin/activate
-   ```
-
-2. **Install requirements**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. **Run the data script (uses the included sample by default)**
-   ```bash
-   python src/load_meteorites.py --input data/meteorites_sample.csv
-   ```
-
-   Outputs:
-   - `outputs/summary.csv`
-   - `images/mass_vs_year.png`
-
-4. **(Optional) Launch the Streamlit app**
-   ```bash
-   streamlit run streamlit_app.py
-   ```
+## How It Works
+1. **Place your CSV file** inside the `/data` folder (or update script path if needed).
+2. **Push changes** to GitHub.
+3. GitHub Actions will:
+   - Run the Python script.
+   - Generate output charts/images.
+   - Save them as downloadable artifacts.
 
 ---
 
-## Use the full NASA dataset
-The official dataset is **Meteorite Landings** on data.nasa.gov. Download the CSV and run:
+## Triggering the Workflow
+
+You can trigger the Python CI workflow in **three ways**:
+
+### 1. Push to Any Branch
+Make any change in the repo (e.g., edit `README.md`), commit, and push.
+
 ```bash
-python src/load_meteorites.py --input /path/to/Meteorite_Landings.csv
-```
+git add .
+git commit -m "Trigger workflow"
+git push
 
-> Tip: If the CSV uses a `year` column with full timestamps, the script will parse it automatically.
-
-
----
-
-## GitHub: First Venture Checklist (do these after downloading starter)
-1. **Create a new repo on GitHub** 
-2. Add a clear **README** (this file) and **License** (MIT included).
-3. Create your first **issue**: “Load full NASA dataset + make plot.”
-4. Create a **branch**: `feat/full-dataset`.
-5. Commit changes (`git add -A && git commit -m "Add full NASA dataset workflow"`), then **open a Pull Request** from your branch.
-6. Merge the PR and **close the issue**.
-7. Add a **screenshot** of your chart to `/images` and reference it in README using Markdown (see below).
-8. Create a **Release** (tag `v0.1.0`).
-
-### Add a chart preview to README
-```markdown
-## Chart Preview
-![Mass vs Year](images/mass_vs_year.png)
-```
-
----
-
-## Project Ideas to Extend
-- Add filters for **class**, **mass**, and **decade** in the Streamlit app.
-- Compute **top-10 meteorites by mass** and map them by coordinates.
-- Publish a short writeup in the README explaining your insights.
-
----
-
-## License
-MIT © 2025 Fatima Aftab
