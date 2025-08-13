@@ -80,17 +80,7 @@ python src/load_meteorites.py --input /path/to/Meteorite_Landings.csv
 - Compute **top-10 meteorites by mass** and map them by coordinates.
 - Publish a short writeup in the README explaining your insights.
 
-# Make any change (edit a file or create a new one)
-echo "# Test Trigger" >> trigger.md
-
-# Stage and commit
-git add .
-git commit -m "Trigger workflow"
-
-# Push to main
-git push origin main
-
 ---
 
 ## License
-MIT © 2025 Your Name
+MIT © 2025 Fatima Aftab
