@@ -1,26 +1,29 @@
-# 🌌 Meteorite Landing Data Visualizer – Automated CSV to Chart (Data from NASA)
+# 🌌 Meteorite Landing Data Visualizer
 
-> _Turning your raw CSV data into **beautiful charts** without lifting a finger... well, except to click “Push”._
+Automated pipeline that turns NASA's public meteorite landing dataset into charts, using GitHub Actions to run the analysis on every push.
 
-This repository contains a **Python script** that processes CSV files and automatically generates charts/images using **GitHub Actions**.  
-Just drop your data in, push it to GitHub, and **watch the magic happen** ✨.
+## What it does
+Takes NASA's [Meteorite Landings](https://data.nasa.gov/) CSV data, loads and processes it with pandas, and generates visualizations (via `load_meteorites.py` / `streamlit_app.py`) showing patterns in landing locations, mass distribution, and time trends — no manual chart-building required.
 
----
+## How it works
+1. **Drop a CSV** into the `/data` folder (sample meteorite data included: `meteorites_sample.csv`)
+2. **Push to GitHub** — commit and push your changes
+3. **GitHub Actions runs automatically** — the workflow executes `load_meteorites.py` on every push
+4. **Charts appear as downloadable artifacts** in the Actions run, or live via the Streamlit app
 
-## 🚀 How It Works
-1. **📂 Drop Your CSV** – Put your CSV file inside the `/data` folder.  
-2. **⬆ Push to GitHub** – Commit and push the changes.  
-3. **🤖 Automated Run** – GitHub Actions runs the Python script for you.  
-4. **📥 Download Results** – Your shiny new charts will be ready as downloadable artifacts.
-
----
-
-## 🛠 How to Trigger the Workflow
-
-You can make the **Python CI** workflow run in three ways:
-### 1️⃣ Push to Any Branch
+## Run it locally
 ```bash
-git add .
-git commit -m "Trigger workflow"
-git push
+git clone https://github.com/pallasArchive/nasa-github-starter.git
+cd nasa-github-starter
+pip install -r requirements.txt
+streamlit run streamlit_app.py
+```
 
+## Results
+*(Add 1-2 screenshots or a sample chart here — this is the single highest-impact thing missing right now. A committee member scanning your repos will judge this in 5 seconds by whether they can see the output without cloning it.)*
+
+## Tech
+Python · pandas · Streamlit · GitHub Actions
+
+## License
+MIT
